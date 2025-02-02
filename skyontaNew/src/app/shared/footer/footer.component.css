@@ -1,0 +1,92 @@
+/* Footer Styles */
+.footer {
+    background-color: #232323;
+    opacity: 0.9;
+    color: #fff;
+    padding: 40px 0;
+    font-size: 0.9rem;
+  }
+  
+  .footer h5 {
+    color: #ff7043;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .footer p,
+  .footer a {
+    color: #ddd;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    color: #ff7043;
+  }
+  
+  .footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer ul li a {
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer ul li a i {
+    color: #ff7043;
+    margin-right: 10px;
+  }
+  
+  .footer .social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1.5rem;
+    color: #ddd;
+    transition: color 0.3s;
+  }
+  
+  .footer .social-icons a:hover {
+    color: #ff7043;
+  }
+  
+  /* Copyright Section */
+  .copyright {
+    background-color: #1a1a1a;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.85rem;
+    color: #ccc;
+  }
+  
+  .copyright a {
+    color: #ff7043;
+    text-decoration: none;
+  }
+  
+  .copyright a:hover {
+    color: #fff;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer h5 ul {
+      text-align: center;
+    }
+ 
+  
+    .footer .social-icons  , p{
+      justify-content: center;
+      margin-top: 20px;
+      text-align: center;
+      
+    }
+  }
+  

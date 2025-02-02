@@ -1,0 +1,560 @@
+h1 {
+    margin-top: 30px;
+  }
+  
+  .carousel {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(calc(-100% * var(--currentSlide, 0)));
+  }
+  
+  .carousel-slide {
+    flex: 0 0 100%;
+    display: none; /* Hide non-active slides */
+  }
+  
+  .carousel-slide.active {
+    display: block; /* Show the active slide */
+  }
+  
+  .carousel img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 9; /* Maintain consistent aspect ratio */
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+    border-radius: 8px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Shadow for style */
+  }
+  
+  /* Navigation Buttons */
+  .nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .nav.left {
+    left: 10px;
+  }
+  
+  .nav.right {
+    right: 10px;
+  }
+  
+  /* Dots */
+  .dots {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: rgba(90, 91, 88, 0.617);
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .dot.active {
+    background-color: #ffa500;
+  }
+  @media (max-width: 768px) {
+    .nav {
+      width: 30px;
+      height: 30px;
+    }
+  
+    .dot {
+      height: 10px;
+      width: 10px;
+    }
+  }
+  
+  .price-section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: linear-gradient(135deg,#1b93c2 ,#1b93c2 ,#1b93c2 ); /* Gradient background */
+    border-radius: 12px;
+    color: #fff; /* White text for contrast */
+    box-shadow: 0 4px 8px rgba(0.1, 0.5, 0.5, 0.3);
+    text-align: center;
+  }
+  
+  .price-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .price-title .adult-price {
+    color: #ffeb3b; /* Bright yellow for adult price */
+    font-size: 1.6rem;
+  }
+  
+  .price-title .child-price {
+    color: #ffeb3b; /* Orange for child price */
+    font-size: 1.6rem;
+  }
+  
+  /* Minibus Info Styling */
+  .minibus-info {
+    font-size: 1.1rem;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+  }
+  
+  .minibus-info i {
+    font-size: 1.5rem; /* Larger icon size */
+    color: #fff;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .price-title {
+      font-size: 1.2rem;
+    }
+  
+    .minibus-info {
+      font-size: 1rem;
+    }
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9; /* Light background for contrast */
+  }
+  
+  /* General Styling */
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .trip-description {
+    background-color: #ffffff;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .trip-description h1 {
+    font-size: 2rem;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .trip-description .intro {
+    font-size: 1rem;
+    color: #555555;
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+  
+  .highlights h2, .details h2 {
+    font-size: 1.5rem;
+    color: #ff7043; /* Highlighted section titles */
+    margin-bottom: 10px;
+  }
+  
+  .highlights ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+    list-style: disc;
+  }
+  
+  .highlights ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #555555;
+  }
+  
+  .details p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #555555;
+  }
+  
+  .details strong {
+    color: #333333;
+  }
+  
+  .note {
+    background: #fff8e1; /* Light yellow background for note */
+    border-left: 4px solid #ffd700; /* Gold border for emphasis */
+    padding: 10px 15px;
+    font-size: 0.95rem;
+    color: #555555;
+    margin-top: 20px;
+  }
+  
+  .cta {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .cta .btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #ff7043;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta .btn:hover {
+    background-color: #e95f33;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .trip-description {
+      padding: 20px;
+    }
+  
+    .trip-description h1 {
+      font-size: 1.8rem;
+    }
+  
+    .trip-description .intro,
+    .details p,
+    .highlights ul li {
+      font-size: 0.95rem;
+    }
+  
+    .cta .btn {
+      font-size: 0.9rem;
+      padding: 10px 15px;
+    }
+  }
+  
+  
+  /* start trip summary */
+  .trip-summary {
+    background-color: #ffffff;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 100;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .trip-summary h1 {
+    font-size: 2rem;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .trip-summary .intro {
+    font-size: 1rem;
+    color: #555555;
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+  
+  .highlights, .inclusions, .exclusions {
+    margin-bottom: 20px;
+  }
+  
+  .highlights h2, .inclusions h2, .exclusions h2 {
+    font-size: 1.5rem;
+    color: #ff7043; /* Highlighted section titles */
+    margin-bottom: 10px;
+  }
+  
+  .highlights ul, .inclusions ul, .exclusions ul {
+    padding-left: 20px;
+    list-style: disc;
+  }
+  
+  .highlights ul li, .inclusions ul li, .exclusions ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #555555;
+  }
+  
+  .note {
+    background: #fff8e1; /* Light yellow background for note */
+    border-left: 4px solid #ffd700; /* Gold border for emphasis */
+    padding: 10px 15px;
+    font-size: 0.95rem;
+    color: #555555;
+    margin-top: 20px;
+  }
+  
+  .cta {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .cta .btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #ff7043;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta .btn:hover {
+    background-color: #e95f33;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .trip-summary {
+      padding: 20px;
+    }
+  
+    .trip-summary h1 {
+      font-size: 1.8rem;
+    }
+  
+    .trip-summary .intro,
+    .highlights ul li,
+    .inclusions ul li,
+    .exclusions ul li {
+      font-size: 0.95rem;
+    }
+  
+    .cta .btn {
+      font-size: 0.9rem;
+      padding: 10px 15px;
+    }
+  }
+  /* end trip summary */
+  
+  
+  
+  
+  
+  
+  .p-heading {
+    color: #212529;
+  }
+  .simple-accordion .accordion-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    background-color: #f9f9f9; /* Light, clean background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  
+  }
+  
+  .simple-accordion .accordion-header {
+    background-color: #ffffff;
+    padding: 0;
+  }
+  
+  .simple-accordion .accordion-button {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    padding: 15px 20px;
+    text-align: left;
+    background: none;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .simple-accordion .accordion-button:not(.collapsed) {
+    background-color: #87CEEB; /* Sky Blue for active headers */
+    color: #ffffff; /* White text for active state */
+  }
+  
+  .simple-accordion .accordion-button:hover {
+    background-color: #ffa726; /* Light orange hover effect */
+    color: #ffffff;
+  }
+  
+  .simple-accordion .accordion-body {
+    padding: 15px 20px;
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    background-color: #ffffff;
+    border-top: 1px solid #ddd;
+  }
+  
+  .simple-accordion .accordion-body ul {
+    padding-left: 20px;
+    list-style: disc;
+  }
+  
+  .simple-accordion .accordion-body a {
+    color: #f57c00; /* Orange for links */
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .simple-accordion .accordion-body a:hover {
+    text-decoration: underline;
+  }
+  /* FAQ Section Styling */
+  #quHeader{
+  color: #ff7043;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 550;
+  }
+  .faq-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+  }
+  
+  .faq-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ff7043; /* Soft orange for the title */
+  }
+  
+  .faq-card {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .faq-card:hover {
+    transform: translateY(-5px); /* Lift the card slightly */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
+  }
+  
+  .faq-card h4 {
+    font-size: 1.2rem;
+    color: #333333;
+    margin-bottom: 10px;
+  }
+  
+  .faq-card p {
+    font-size: 0.95rem;
+    color: #555555;
+    line-height: 1.6;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .faq-title {
+      font-size: 1.6rem;
+    }
+  
+    .faq-card {
+      padding: 15px;
+    }
+  
+    .faq-card h4 {
+      font-size: 1.1rem;
+    }
+  
+    .faq-card p {
+      font-size: 0.9rem;
+    }
+  }
+  /* start reservation */
+  /* Reservation Section Styling */
+  .reservation {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 400px; /* Centered and contained */
+  }
+  
+  .reservation h6 {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #555; /* Neutral text color */
+  }
+  
+  /* Button Styling */
+  .btn-reservation {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffffff; /* White text for visibility */
+    background-color: #25d366; /* WhatsApp green */
+    border-radius: 8px;
+    text-decoration: none; /* Remove underline */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a slight shadow */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .btn-reservation i {
+    font-size: 1.3rem; /* Icon size */
+  }
+  
+  .btn-reservation:hover {
+    background-color: #1ebe57; /* Darker green for hover effect */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
+  }
+  
+  .btn-reservation:active {
+    background-color: #1a9c4a; /* Even darker green for active state */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduce shadow for active state */
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .btn-reservation {
+      font-size: 1rem;
+      padding: 10px 15px;
+    }
+  
+    .btn-reservation i {
+      font-size: 1.2rem;
+    }
+  }
+  /* end reservation */
+  

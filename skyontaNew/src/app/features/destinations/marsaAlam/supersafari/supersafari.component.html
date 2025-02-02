@@ -1,0 +1,80 @@
+<div class="container">
+    <div class="row">
+      <div  class="col-md-6 col-sm-12 trip-title" style="margin-top: 100px; ">
+        <h1>Quady i jeep - BBQ z wiełbłądami i wioską beduińską</h1>
+      </div>
+    </div>
+  
+    <!-- start of carasoule -->
+    <div class="carousel">
+      <button class="nav left" (click)="prevSlide()">&#10094;</button>
+      <div class="carousel-track">
+        <div class="carousel-slide" *ngFor="let image of tripImages; let i = index" [class.active]="i === currentSlide">
+          <img [src]="image.src" [alt]="image.alt" />
+        </div>
+      </div>
+      <button class="nav right" (click)="nextSlide()">&#10095;</button>
+    </div>
+  
+    <div class="dots">
+      <span class="dot" *ngFor="let image of tripImages; let i = index" [class.active]="i === currentSlide"
+        (click)="goToSlide(i)"></span>
+    </div>
+    <section class="trip-details">
+      <div class="container">
+        <div class="trip-header text-center">
+          <h2>🌄 Super Safari - Niezapomniana Pustynna Przygoda</h2>
+          <h5 class="price">💰 Cena od osoby dorosłey: <span>$35</span></h5>
+          <p> Dzieci (5-11 lat): 18$</p>
+        </div>
+    
+        <div class="trip-content">
+          <p class="text-start mt-4">
+            🚙 Start: Odbiór z hotelu o 13:00 legendarnym Toyota Land Cruiser 4x4. 
+            <br> 🏜️ Cel: Wioska Beduinów – tradycyjne doświadczenie życia pustynnego! 
+          </p>
+    
+          <h3 class="mb-4">📌 Plan Wycieczki:</h3>
+          <ul class="trip-plan list-unstyled text-start">
+            <li>🚙 <strong>Przejazd Jeepem 4x4</strong> przez pustynię (22 km) z przystankiem przy słynnym drzewie Akassia.</li>
+            <li>🏜️ Powitanie w wiosce Beduinów – powitalna herbata i pokaz lokalnych tradycji.</li>
+            <li>🏍️ Przejażdżka quadem po pustynnych dolinach! (Adrenalina gwarantowana!)</li>
+            <li>🐫 Jazda na wielbłądzie – poznaj życie Beduinów!</li>
+            <li>🥖 Pokaz pieczenia chleba, wizyta w beduińskiej aptece i studni.</li>
+            <li>🌅 Podziwianie zachodu słońca – niepowtarzalne widoki!</li>
+            <li>🔥 Kolacja BBQ w formie bufetu: grillowany kurczak, kofta, sałatki, owoce, napoje.</li>
+            <li>💃 Tradycyjna impreza beduińska – muzyka, taniec i niezapomniana atmosfera!</li>
+            <li>✨ Pokaz gwiazd w podniebnym teatrze przed powrotem do hotelu.</li>
+          </ul>
+    
+          <h3 class="mb-4">💰 Cennik:</h3>
+          <ul class="trip-prices list-unstyled text-start">
+            <li>👤 Dorosły: <span>35$</span></li>
+            <li>👶 Dzieci (5-11 lat): <span>18$</span></li>
+            <li>🍼 Dzieci (0-5 lat): <span>Bezpłatnie</span></li>
+          </ul>
+    
+          <h3 class="mb-4">✅ Wliczone w cenę:</h3>
+          <ul class="included list-unstyled text-start">
+            <li>🚐 Transfer z/do hotelu</li>
+            <li>🍽️ Kolacja BBQ w formie bufetu</li>
+            <li>🥤 Napoje bezalkoholowe</li>
+          </ul>
+    
+          <h3 class="mb-4">❌ Nie wliczone w cenę:</h3>
+          <ul class="not-included list-unstyled text-start">
+            <li>💰 Wydatki osobiste (napiwki, zdjęcia)</li>
+            <li>🧕 Arafatki – można kupić na miejscu</li>
+          </ul>
+        </div>
+    
+        <!-- Reservation Button -->
+        <div class="reservation">
+          <h6>📞 Po więcej informacji</h6>
+          <a href="https://wa.me/201010655608?text=" class="btn btn-success ">
+            <i class="fa-brands fa-whatsapp"></i> Rezerwuj teraz
+          </a>
+        </div>
+      </div>
+    </section>
+    

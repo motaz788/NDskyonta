@@ -1,0 +1,76 @@
+<div class="container">
+    <div class="row">
+      <div  class="col-md-6 col-sm-12 trip-title" style="margin-top: 100px; ">
+        <h1> Port Ghalib City Tour</h1>
+      </div>
+    </div>
+  
+    <!-- start of carasoule -->
+    <div class="carousel">
+      <button class="nav left" (click)="prevSlide()">&#10094;</button>
+      <div class="carousel-track">
+        <div class="carousel-slide" *ngFor="let image of tripImages; let i = index" [class.active]="i === currentSlide">
+          <img [src]="image.src" [alt]="image.alt" />
+        </div>
+      </div>
+      <button class="nav right" (click)="nextSlide()">&#10095;</button>
+    </div>
+  
+    <div class="dots">
+      <span class="dot" *ngFor="let image of tripImages; let i = index" [class.active]="i === currentSlide"
+        (click)="goToSlide(i)"></span>
+    </div>
+  
+  
+  
+    <!-- end of carasoule -->
+   <!-- Port Ghalib Trip Section -->
+  <section class="trip-details">
+    <div class="container">
+      <div class="trip-header">
+        <h2>🌊 Port Ghalib - Egzotyczna Perła Morza Czerwonego</h2>
+        <h5 class="price">Cena od osoby dorosłej: <span>$10</span></h5>
+        <small>specjalna cena dla rodzin i dużych grup</small>
+      </div>
+  
+      <div class="trip-content">
+        <p>
+          <strong>✈️ Port lotniczy Marsa Alam</strong> został otwarty w 1998 roku jako kluczowy element rozwoju turystycznego regionu.
+          To czyste i nowoczesne lotnisko, które pozwala na szybki transfer do pobliskich hoteli – w 5 minut dojedziesz do serca Port Ghalib.
+        </p>
+  
+        <p>
+          <strong>🏝️ Port Ghalib</strong> to luksusowy kurort, który jest jednym z największych projektów turystycznych w Egipcie.
+          Finansowany przez szejka z Kuwejtu, a zaprojektowany przez renomowaną grupę architektoniczną WAT&G. 
+          Całkowita wartość inwestycji wynosi ponad 1,5 miliarda dolarów.
+        </p>
+  
+        <p>
+          <strong>🌟 Co czeka na Ciebie w Port Ghalib?</strong>
+        </p>
+        <ul>
+          <li>⚓ Międzynarodowa marina – miejsce dla luksusowych jachtów do 50 m.</li>
+          <li>🏬 Portowa promenada (800 m) – tętniąca życiem ulica pełna butików, kawiarni i galerii.</li>
+          <li>🌅 Luksusowe hotele i apartamenty – spektakularne widoki na morze i port.</li>
+          <li>💆‍♀️ Spa i centra wellness – ekskluzywne miejsca relaksu i odnowy biologicznej.</li>
+          <li><i class="fas fa-utensils" style="margin-right: 20px;"></i> Hakuna matata coffee restauracja i Divino coffee restauracja          .</li>
+          <li>💆‍♀️ Spa i centra wellness – ekskluzywne miejsca relaksu i odnowy biologicznej.</li>
+        </ul>
+        <p>
+  
+        <p>
+          <strong>🏰 "Wenecja Egiptu"</strong> – Port Ghalib docelowo będzie składał się z 9 wiosek tematycznych, 
+          które stworzą unikalny kompleks pełen luksusu i rozrywki.
+        </p>
+      </div>
+  
+      <!-- Reservation Button -->
+      <div class="reservation">
+        <h6>📞 Po więcej informacji</h6>
+        <a href="https://wa.me/201010655608?text=" class="btn-reservation">
+          <i class="fa-brands fa-whatsapp"></i> Rezerwuj teraz
+        </a>
+      </div>
+    </div>
+  </section>
+  

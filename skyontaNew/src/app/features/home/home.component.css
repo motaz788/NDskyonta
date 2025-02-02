@@ -1,0 +1,424 @@
+
+
+/* Home Section start */
+.home{
+    width: 100%;   
+    height: 90vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.2)),url(../../../assets/images/home.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+  
+  .home .content {
+    text-align: center;
+    padding-top: 200px;
+  }
+  .content , h4,  p {
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    text-shadow: 0px 1px 1px black;
+    margin-top: 20px;
+  }
+  .home .content a {    
+  padding: 10px;
+  background: white;
+  color: black;
+  letter-spacing: 0.5px;
+  font-weight: 550;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0px 5px 5px -6px black;
+  
+  transition: 0.5s;
+  opacity: 0.7;
+  } 
+  .home .content  a:hover{
+    background: #ffa500;
+    color: black;
+    opacity: 1;
+  
+  }
+  
+  
+  
+  .home .content h5{
+    color: white;
+    font-size: 38px;
+    font-weight: 550;
+   text-shadow: 0px 1px 1px black;
+   text-align: center;
+  
+  }
+  .home .content h1 {
+    color: white;
+    font-size: 70px;
+    font-weight: 550;
+    text-shadow: 0px 1px 1px black;
+    margin-top: 5px;
+  }
+  .changecontent::after{
+    content:'';
+    color: #ffa500;
+    text-shadow: 0px 1px 1px black;
+    animation: changetext 25s infinite linear;
+  }
+  @keyframes changetext{
+    0%{
+        content: 'luksor ';
+    }
+    10%{
+        content: 'Kairo';
+    }
+    20%{
+        content: 'dom delfinów';
+    }
+    30%{
+        content: 'Marsa Mubarak - Zatoka żółwi';
+    }
+    40%{
+        content: 'Orange Bay & Paradise - Wyspa Giftun';
+    }
+    50%{
+        content: ' Hamata - Wyspy Qualaan';
+    }
+    60%{
+        content: 'Sataya - rafa delfinów ';
+    }
+    70%{
+        content: 'Super Safari i Quad Safari';
+    }
+    80%{
+        content: 'City Tour Hurghada, Elqusier stare miasto , port Ghalib  ';
+    }
+    90%{
+        content: 'transfer lotniskowy i wszędzie';
+    }
+    100%{
+        content: 'Abu Dabab';
+    }
+  }
+  
+  /* Home Section end */
+  
+  @media (max-width: 850px) {
+    .home   {
+  background-position: 45%;    }
+  
+    }
+  
+  @media (max-width: 450px) {
+    .home .content h5  { 
+        font-size: 25px;
+  
+    }
+    .home .content h1  { 
+        font-size: 38px;
+  
+  
+    }
+    .home .content  p { 
+        font-size: 13px;
+    }
+  }
+  
+  
+  
+  /* Section Styling */
+  .marsalam-tours {
+    background: linear-gradient(135deg, #e3f2fd, #ffffff); /* Light blue gradient */
+    padding: 60px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Header Styling */
+  .section-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .section-header h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #006d77; /* Teal color */
+    margin-bottom: 10px;
+  }
+  
+  .section-header p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* Features Section */
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* section book start   */
+  .book{
+    background:#f9f9f9;
+    padding: 52px;
+  }
+  .main-text h1{
+    text-align: center;
+    text-shadow: 0px 1px 1px black;
+    font-weight: 600;
+  }
+  .main-text h1 span{
+  color: #ffa500;
+  }
+  .book .card{
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px -6px black;
+  }
+  .book .row{
+    margin-top: 30px;
+  }
+  .book form input{
+    padding: 10px;
+    color: black;
+  
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 10px;
+  
+    box-shadow: 0px 5px 5px -6px black;
+  }
+  .book form textarea{
+    border: none;
+    border-radius: 10px;
+    resize: none;
+    box-shadow: 0px 5px 5px -6px black;
+    height: 200px;
+  }
+  .book .submit{
+    width: 160px;
+    font-size: 16px;
+    font-weight: 550;
+    background: #ffa500;
+    color: white;
+    margin-top: 10px;
+    transition: 0.5s;
+  
+  }
+  .book .submit:hover{
+    width: 170px;
+  }
+  @media (max-width: 765px) {
+    .book  { 
+        padding: 0;
+    }
+    .main-text h1  { 
+        padding: 20px;
+    }
+  }
+  /* section book end   */
+  /* section pakages start */
+  
+  .main-text h1{
+    text-align: center;
+    margin-top: 30px; 
+    font-weight: 600;
+    color: #1b93c2;
+    text-shadow: 0px 1px 1px rgb(0, 0, 0);
+  }
+  .main-text h1 span{
+  color: #ffa500;
+  
+  }
+  .packages .card{
+    border-radius: 5x;
+    border: none;
+    box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
+    margin-top: 30px;
+  }
+  .packages .card img{
+    border-radius: 5px;
+    width: 100%; /* Full width */
+    height: 350px; /* Fixed height */
+    object-fit: cover; /* Ensures images are cropped to fit */
+  }
+  .packages .card .card-body{
+    background: transparent;
+  }
+  .packages .card .card-body{
+    background: transparent;
+  
+  }
+  .packages .card .card-body h3{
+    font-size: 25px;
+    font-weight: 600;
+    color: black;
+    text-shadow: 0px 1px 1px black;
+  }
+  .packages .card .card-body p{
+    font-size: 15px;
+  color: black;
+  }
+  .checked {
+    color: #ffa500;
+  }
+  .star i{
+  font-size: 15px;
+  }
+  .packages .card .card-body h6{
+  font-size:20px ;
+  
+  }
+  .packages .card .card-body a{
+    padding: 10px;
+    background: #ffa500;
+    color: white;
+    letter-spacing: 0.5px;
+    font-weight: 550;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0px 5px 5px -6px black;
+    transition: 0.5s;
+    opacity: 0.7;
+    margin-left: 10px;
+  
+  }
+  
+  @media  (max-width: 660px){
+  .packages .card .card-body a{
+    width: 50%; /* Full width for buttons */
+    margin-left: 5px; /* Reset any left margin */
+  
+  }
+  }
+  
+  /* section pakages end */
+  /* section serices start */
+  
+  .services{
+    background: #f9f9f9;
+    padding: 52px;
+  }
+  .services .card{
+   border:none;
+    box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
+    cursor: pointer;
+    text-align: center;
+  
+  }
+  .services .card i {
+    font-size: 80px;
+    text-align: center;
+    color: #ffa500 ;
+    margin-top: 20px;
+  
+  }
+  .services .card .card-body h3{
+   font-weight: 600px;
+  
+  }
+  .services .card .card-body p{
+  text-align: center;
+  color: black;
+  font-weight: 500;
+  
+  }
+  /* section serices end */
+  
+  /* section Gallary start */
+  .gallary{
+    padding-top: 50px;
+  }
+  .gallary .card{
+    border-radius: 10px;
+    box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
+    cursor: pointer;
+  }
+  .gallary .card img:hover{
+    transform:scale(1.1);
+  
+  }
+  
+  /* section Gallary end */
+  
+  /*  about start */
+  .about{
+    padding: 50px;
+    margin-top: 50px;
+    background: #f9f9f9;
+  }
+  .about .card{
+    border-radius: 10px;
+  }
+  .about .card img{
+    border-radius: 10px;
+  }
+  .about h2 {
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  .about p{
+    font-weight: 500;
+    color: black;
+  }
+  #about-text{
+    margin-top: 10px;
+  }
+  #about-btn{
+    width: 150px;
+    height: 38px;
+    border: none;
+    border-radius: 5px;
+  background: #ffa500;
+  color: white;
+  letter-spacing: 2px;
+  font-weight: 550;
+  transition: 0.5s ease;
+  cursor:pointer;
+  }
+  #about-btn:hover{
+    width: 170px;
+  }
+  @media (max-width: 765px) {
+    .about  { 
+        padding: 0;
+    }
+  }
+  /*  about end */
+  .reviews-section {
+    padding: 50px 20px;
+    background: #f9f9f9;
+    text-align: center;
+  }
+  
+  .reviews-section h2 {
+    font-size: 2rem;
+    color: #006d77;
+    margin-bottom: 20px;
+  }
+  
+  .google-review-widget,
+  .tripadvisor-widget {
+    margin: 20px auto;
+    max-width: 600px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .google-review-widget iframe,
+  .tripadvisor-widget iframe {
+    width: 100%;
+    height: auto;
+  }
+  

@@ -1,0 +1,121 @@
+h1 {
+    margin-top: 10%;
+  }
+  .carousel {
+    margin: 0 auto;
+  }
+  .carousel-item {
+    background-position: center;
+  }
+  .accordion-body a {
+    color: #25d366;
+  }
+  .p-heading {
+    color: #212529;
+  }
+  .accordion {
+    margin-bottom: 2%;
+  }
+  .accordion h3 {
+    color: black;
+  }
+  P {
+    color: #212529;
+  }
+  #description {
+    padding: 1%;
+  }
+  .media-body > h4 {
+    color: #ffbd50;
+  }
+  .card {
+    margin: 10px;
+    border: 1px dashed #ffbd50;
+    border-radius: 15px;
+    background-size: cover;
+    text-align: center;
+  }
+  .card:hover {
+    background-color: #ffbd50;
+    color: #212529;
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all 1s ease;
+  }
+  
+  .accordion-body {
+    background-color: #f8f9fa;
+  }
+  
+  .accordion-header h3 {
+    color: #212529;
+  }
+  i {
+    padding: 10px;
+    color: green;
+    font-weight: bold;
+  }
+  .fa-circle-xmark {
+    color: red;
+  }
+  section h3 {
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+    margin-left: 25px;
+  }
+  span {
+    color: red;
+    padding-left: 20px;
+  }
+  .reservation {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+  }
+  .fa-whatsapp {
+    text-align: center;
+    text-decoration: none;
+    background-color: #25d366;
+    background-size: cover;
+    color: #fff;
+    border-radius: 4px 4px 4px 4px;
+    text-align: center;
+  }
+  a {
+    text-decoration: none;
+  }
+  .reservation h6 {
+    padding-right: 10px;
+    color: #ffbd50;
+  }
+  table {
+    background-color: #ffbd50;
+    color: #000;
+    text-align: center;
+    border: dashed 2px #fff;
+    border-radius: 12px 17px;
+  }
+  table caption {
+    text-align: center;
+    padding-left: 50%;
+  }
+  table th {
+    padding: 20px;
+  }
+  .anti {
+    color: white;
+    font-weight: bold;
+    font-style: oblique;
+    padding-left: 10px;
+  }
+  .fa-whatsapp:hover {
+    transform: scale(1.2);
+    transition: all 1s ease-in;
+  }
+  @media only screen and (max-width: 600px) {
+    .card {
+      width: 32rem;
+    }
+  }
+  

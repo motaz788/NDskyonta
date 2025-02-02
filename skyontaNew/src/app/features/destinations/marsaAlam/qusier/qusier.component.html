@@ -1,0 +1,104 @@
+<div class="container">
+    <div class="row">
+      <div  class="col-md-6 col-sm-12 trip-title" style="margin-top: 100px; ">
+        <h1> stare miasto i zakupy w El Quseir</h1>
+      </div>
+    </div>
+  
+    <!-- start of carasoule -->
+    <div class="carousel">
+      <button class="nav left" (click)="prevSlide()">&#10094;</button>
+      <div class="carousel-track">
+        <div class="carousel-slide" *ngFor="let image of tripImages; let i = index" [class.active]="i === currentSlide">
+          <img [src]="image.src" [alt]="image.alt" />
+        </div>
+      </div>
+      <button class="nav right" (click)="nextSlide()">&#10095;</button>
+    </div>
+  
+    <div class="dots">
+      <span class="dot" *ngFor="let image of tripImages; let i = index" [class.active]="i === currentSlide"
+        (click)="goToSlide(i)"></span>
+    </div>
+  
+  
+  
+    <!-- end of carasoule -->
+  
+  
+    <!-- description section start  -->
+   
+  
+    <section class="trip-details">
+      <div class="container">
+        <!-- Price Section -->
+        <div class="price-header">
+          <h5>cena od osoby dorosłej <span>$10.00</span></h5>
+          <small>specjalna cena dla rodzin i dużych grup</small>
+  
+        </div>
+  
+        <!-- Description Section -->
+        <div class="trip-description">
+          <p>
+            <strong>El Quesir</strong> to miasteczko, które do dziś zachowało swój wspaniały dawny klimat.
+            Jest to niezapomniana wycieczka, aby poznać prawdziwe egipskie życie. Stanowi koniec najkrótszej
+            drogi między Nilem a Morzem Czerwonym. W czasach starożytnych był to jeden z pierwszych i
+            najważniejszych portów Egiptu. Stąd królowa Hatszepsut wysłała swoich emisariuszy do sławnego
+            Puntu, w celu nabycia mirry, hebanu, kości słoniowej i egzotycznych zwierząt.
+          </p>
+          <p>
+            <strong>Program wycieczki</strong> Wyjazd busem z hotelu ok. 14:30. Pierwszym punktem programu
+            będzie oglądanie panoramy z niewielkiego wzgórza. Następnie zwiedzanie meczetu, miejsca kultu każdego
+            muzułmanina,
+            gdzie poznamy zasady Islamu. Kolejnym punktem będzie zwiedzanie starego kościoła koptyjskiego.
+            Następnie odwiedzimy stary port i perfumerię, gdzie można poznać proces tworzenia zapachów
+            i ich aromaty. W mieście spróbujemy typowo egipskiej kuchni, a na koniec będzie czas na zakupy.
+            Powrót do hotelu planowany na ok. 18:30.
+          </p>
+          <h5><strong>Ważne:</strong> Zwiedzanie Cytadeli (na miejscu 3$)</h5>
+        </div>
+  
+        <!-- Accordion Section -->
+        <div class="accordion trip-questions" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                aria-expanded="true" aria-controls="collapseOne">
+                Czy mamy polski przewodnik?
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Tak, masz przewodnika, który mówi po polsku i pokaże ci wszystko w mieście.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Czy mogę iść prywatnie tylko z rodziną?
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Tak, oczywiście. Polski przewodnik będzie z tobą podczas prywatnej wycieczki.
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Reservation Section -->
+        <div class="reservation">
+          <h6>Po więcej informacji</h6>
+          <a href="https://wa.me/201010655608?text=" class="btn btn-primary">
+            <i class="fa-brands fa-whatsapp"></i> Rezerwuj teraz
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- description section end  -->
+  </div>

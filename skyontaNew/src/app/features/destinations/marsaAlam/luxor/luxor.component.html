@@ -1,0 +1,313 @@
+<div class="container">
+    <div class="row">
+  <div class="col-md-6 col-sm-12"  style="margin-top: 100px; ">
+    <h5>Wycieczka do Doliny Królów z Marsa Alam</h5>
+  </div> 
+   </div>
+   <!-- start of carasoule -->
+   <div class="carousel">
+    <button class="nav left" (click)="prevSlide()">&#10094;</button>
+    <div class="carousel-track">
+      <div
+        class="carousel-slide"
+        *ngFor="let image of tripImages; let i = index"
+        [class.active]="i === currentSlide"
+      >
+        <img [src]="image.src" [alt]="image.alt" />
+      </div>
+    </div>
+    <button class="nav right" (click)="nextSlide()">&#10095;</button>
+  </div>
+  
+  <div class="dots">
+    <span
+      class="dot"
+      *ngFor="let image of tripImages; let i = index"
+      [class.active]="i === currentSlide"
+      (click)="goToSlide(i)"
+    ></span>
+  </div>
+  
+  
+   
+   <!-- end of carasoule -->
+  
+    <section>
+      <div class="row price-section" id="price">
+        <h6 class="price-title">
+          Cena: 
+          <span class="adult-price">85$</span> od osoby dorosle |<span class="child-price">50$</span> dzieci
+        </h6>
+        <div class="minibus-info">
+          <i class="fas fa-shuttle-van"></i> z minibusem Maksymalnie 8 osób
+        </div>
+      </div>
+      
+      <div class="trip-description">
+        <h2>Wycieczka Doliną Królów z Marsa Alam lub Hurgadzie</h2>
+        <div class="trip-content">
+          <p>
+            <strong>Wycieczka Doliną Królów</strong> z Marsa Alam lub Hurgadzie jest
+            rozszerzoną wersją wycieczki do Luksoru. Rozpoczyna się wizytą w
+            <strong>świątyni Karnak</strong>, największym miejscu kultu, jakie
+            kiedykolwiek zbudowano. Jego starożytna nazwa <em>ipet-isut</em> oznacza
+            „najświętsze miejsce”. Kompleks świątynny był budowany ponad
+            <strong>2000 lat</strong> przez pokolenia faraonów. Wielka Sala Kolumnowa
+            to niesamowity las filarów.
+          </p>
+          <p>
+            Po lunchu w restauracji nad Nilem udasz się na zachodni brzeg tej
+            wspaniałej rzeki, aby odwiedzić dwa gigantyczne posągi Amenhotepa III –
+            <strong>Kolosy Memnona</strong>. Następnie udasz się do
+            <strong>Doliny Królów</strong>. W tym starożytnym klasztorze będziesz
+            mógł wejść do <strong>trzech grobowców</strong> (w cenie wycieczki).
+          </p>
+          <p>
+            Następnie odwiedzisz wielką <strong>świątynię Hatszepsut</strong>.
+            Poświęcona królowej Hatszepsut – jedynej kobiecie-faraonowi w starożytnym
+            Egipcie – świątynia wznosi się z pustynnej równiny w szereg tarasów.
+            Na zakończenie wycieczki zabierzemy Cię do warsztatów alabastrowych, w
+            których Egipcjanie ręcznie wytwarzają swoje produkty. Po zakończeniu
+            wycieczki odwieziemy Cię do hotelu w Marsa Alam lub Hurgadzie.
+          </p>
+        </div>
+      </div>
+    </section>
+   <!-- accordion trip quations
+   -->
+   <div class="trip-summary">
+    <h2>Wycieczka do Luksoru i Doliny Królów</h2>
+    <p class="trip-intro">
+      Odkryj Luksor z naszym doświadczonym przewodnikiem! To idealna wycieczka dla
+      rodzin i dorosłych, pełna historii i niezapomnianych chwil.
+    </p>
+  
+    <h3>Miejsca, które odwiedzisz:</h3>
+    <ul class="locations">
+      <li>✅ Świątynia Hatszepsut</li>
+      <li>✅ Kolosy Memnona</li>
+      <li>✅ Świątynia Karnak</li>
+      <li>✅ Dolina Królów i 3 wybrane grobowce.</li>
+      <li>✅ przepłynięcie łodzią na drugą stronę Nilu w 3 minuty</li>
+    </ul>
+  
+    <h3>W cenie:</h3>
+    <ul class="included">
+      <li>✅ Transport</li>
+      <li>✅ Przewodnik</li>
+      <li>✅ Wstępy do obiektów</li>
+      <li>✅ Lunch w tradycyjnej restauracji</li>
+      <li>✅ Router Wi-Fi w podróży</li>
+      <li>✅ Woda i przekąski</li>
+      <li>✅ przekąski w autobusie</li>
+    </ul>
+  
+    <h3>Nie wliczone:</h3>
+    <ul class="not-included">
+      <li>❌ Napiwki</li>
+      <li>❌ Napoje bezalkoholowe do lunchu</li>
+      <li>❌ rejsu Nilem z wizytą na Wyspie Bananowe</li>
+      <li>❌wejście do Grobowca Tutenchamona</li>
+    </ul>
+  
+    <p class="reminder">
+      <strong>Nie zapomnij:</strong> paszportu, aparatu, pieniędzy, wody oraz
+      śniadania na wynos z hotelu.
+    </p>
+  
+    <p class="contact">Skontaktuj się z nami, aby uzyskać więcej informacji!</p>
+  </div>
+  
+  <!-- Peice -->
+  
+  
+  
+   <div class="accordion simple-accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button
+          class="accordion-button"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseOne"
+          aria-expanded="true"
+          aria-controls="collapseOne"
+        >
+          Jak zarezerwować wycieczkę do Doliny Królów z Marsa Alam?
+        </button>
+      </h2>
+      <div
+        id="collapseOne"
+        class="accordion-collapse collapse show"
+        aria-labelledby="headingOne"
+        data-bs-parent="#accordionExample"
+      >
+        <div class="accordion-body">
+          By zarezerwować wycieczkę do Doliny Królów należy przesłać:
+          <ul>
+            <li>Nazwę hotelu</li>
+            <li>Numer pokoju</li>
+            <li>Imiona i nazwiska wszystkich uczestników</li>
+            <li>Datę przylotu i wylotu</li>
+            <li>Nazwę biura podróży</li>
+            <li>Zdjęcie paszportów i wiz</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseTwo"
+          aria-expanded="false"
+          aria-controls="collapseTwo"
+        >
+          Jaka jest cena wycieczki do Luksoru z Doliną Królów dla dzieci?
+        </button>
+      </h2>
+      <div
+        id="collapseTwo"
+        class="accordion-collapse collapse"
+        aria-labelledby="headingTwo"
+        data-bs-parent="#accordionExample"
+      >
+        <div class="accordion-body">
+          <strong>Dzieci do 6 lat:</strong> wycieczka za darmo. <br />
+          <strong>Dzieci od 6 do 12 lat:</strong> płacą połowę ceny.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseThree"
+          aria-expanded="false"
+          aria-controls="collapseThree"
+        >
+          W jakie dni odbywa się wycieczka?
+        </button>
+      </h2>
+      <div
+        id="collapseThree"
+        class="accordion-collapse collapse"
+        aria-labelledby="headingThree"
+        data-bs-parent="#accordionExample"
+      >
+        <div class="accordion-body">
+          Codziennie jedziemy do Luksoru i Doliny Królów.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFour">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseFour"
+          aria-expanded="false"
+          aria-controls="collapseFour"
+        >
+          Czy podczas wycieczki są ukryte koszty?
+        </button>
+      </h2>
+      <div
+        id="collapseFour"
+        class="accordion-collapse collapse"
+        aria-labelledby="headingFour"
+        data-bs-parent="#accordionExample"
+      >
+        <div class="accordion-body">
+          Nie ma żadnych ukrytych kosztów poza tymi, które znajdują się na liście
+          “Dodatkowo płatne”. Masz pytania? Skontaktuj się z nami na
+          <a href="https://shorturl.at/Z8k9r" target="_blank">Facebooku SkyOnta Tours</a>
+          lub przez Whatsapp pod numerem <a href="https://wa.me/201010655608?text=">+201010655608</a>.
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Peice -->
+  
+  
+  
+    <!-- end of peice -->
+    <div id="description" class="basic-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12" id="quHeader">
+            <p>Wycieczka do Luksoru FAQ Najczęściej Zadawane Pytania</p>
+          </div>
+          <!-- end of col -->
+        </div>
+        <!-- end of row -->
+        <div class="faq-section">
+          <h2 class="faq-title">Najczęściej zadawane pytania o wycieczkę do Luksoru</h2>
+          <div class="row">
+            <!-- Column 1 -->
+            <div class="col-lg-6">
+              <div class="faq-card">
+                <h4>Wycieczka do Luksoru z Marsa Alam i Hurghada –  czy warto?</h4>
+                <p>
+                  Pomimo kilkugodzinnej podróży autobusem, turyści są zachwyceni wycieczką. Luksor podoba się większości bardziej niż Kair!
+                </p>
+              </div>
+              <div class="faq-card">
+                <h4>Wycieczka do Doliny Królów – o czym warto pamiętać?</h4>
+                <p>
+                  To całodniowa wycieczka z lunchem. Pamiętaj, aby dzień wcześniej zamówić w recepcji hotelu śniadanie na wynos (breakfast box).
+                </p>
+              </div>
+              <div class="faq-card">
+                <h4>Czy wycieczka do Luksoru jest bezpieczna?</h4>
+                <p>
+                  Wycieczka odbywa się tylko z zezwoleniem policji turystycznej. W wyjątkowych sytuacjach (np. złej pogody) wyjazdy są odwoływane.
+                </p>
+              </div>
+              <div class="faq-card">
+                <h4>Czy za wycieczkę można zapłacić inną walutą?</h4>
+                <p>
+                  Akceptujemy USD, EUR, GBP oraz EGP. Nie przyjmujemy płatności kartą. Wyjątkowo akceptujemy przelewy, ale preferujemy gotówkę.
+                </p>
+              </div>
+            </div>
+            <!-- Column 2 -->
+            <div class="col-lg-6">
+              <div class="faq-card">
+                <h4>Jak się ubrać do Luksoru?</h4>
+                <p>
+                  Wygodnie i praktycznie! Ubierz się sportowo, najlepiej na lekko, ale weź coś cieplejszego na podróż autokarem (klimatyzacja).
+                </p>
+              </div>
+              <div class="faq-card">
+                <h4>Jaka jest odległość z Marsa Alam do Luksoru?</h4>
+                <p>Z Marsa Alam do Luksoru (przez Safagę) jest około 450 km.</p>
+              </div>
+              <div class="faq-card">
+                <h4>Jak poznam bus/autokar, który po mnie przyjedzie?</h4>
+                <p>
+                  Kierowca zna Twój numer pokoju i poda go przy odbiorze. Zwiedzanie Luksoru zawsze odbywa się z polskojęzycznym przewodnikiem.
+                </p>
+              </div>
+              <div class="faq-card">
+                <h4>O której jest wyjazd/powrót?</h4>
+                <p>
+                  Wyjazd między 4:40 a 5:00 rano. Powrót około 21:00. Płatność odbywa się w autokarze u rezydenta.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="reservation">
+          <h6>Po więcej informacji</h6>
+          <a href="https://wa.me/201010655608?text=" class="btn-reservation">
+            <i class="fa-brands fa-whatsapp"></i> Rezerwuj teraz
+          </a>
+        </div>
+  </div>
+  

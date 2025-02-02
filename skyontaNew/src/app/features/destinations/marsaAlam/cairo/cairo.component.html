@@ -1,0 +1,355 @@
+<div class="container">
+    <div class="row">
+  <div class="col-md-6 col-sm-12" style="margin-top: 100px; ">
+    <h5>Wycieczka do Piramid i Sfinks i Muzeum Egipskiego</h5>
+  </div> 
+   </div>
+   <!-- start of carasoule -->
+   <div class="carousel">
+    <button class="nav left" (click)="prevSlide()">&#10094;</button>
+    <div class="carousel-track">
+      <div
+        class="carousel-slide"
+        *ngFor="let image of tripImages; let i = index"
+        [class.active]="i === currentSlide"
+      >
+        <img [src]="image.src" [alt]="image.alt" />
+      </div>
+    </div>
+    <button class="nav right" (click)="nextSlide()">&#10095;</button>
+  </div>
+  
+  <div class="dots">
+    <span
+      class="dot"
+      *ngFor="let image of tripImages; let i = index"
+      [class.active]="i === currentSlide"
+      (click)="goToSlide(i)"
+    ></span>
+  </div>
+  
+  
+   
+   <!-- end of carasoule -->
+     <!-- end of price -->
+  
+   <div class="row price-section" id="price">
+    <h6 class="price-title">
+      Cena: 
+      <span class="adult-price">100$</span> od osoby dorosle |<span class="child-price">60$</span> dzieci
+    </h6>
+    <div class="minibus-info">
+      <i class="fas fa-shuttle-van"></i> z minibusem Maksymalnie 8 osób
+    </div>
+  </div>
+  
+   <!-- end of price -->
+  
+   <section class="trip-description">
+  
+    
+    <div class="container">
+      <h1>Wycieczka do Piramid i Muzeum Egipskiego</h1>
+      <p class="intro">
+        Piramidy w Gizie są jednym z siedmiu cudów świata. Być w Egipcie i nie zobaczyć piramid? 
+        To byłaby wielka szkoda! Choć z Marsa Alam do Kairu jest daleko (około 750 km), 
+        wycieczka pozwoli Ci w ciągu jednego dnia odkryć cuda starożytnego Egiptu.
+      </p>
+  
+      <div class="highlights">
+        <h2>Najważniejsze atrakcje wycieczki:</h2>
+        <ul>
+          <li>Zwiedzanie Muzeum Egipskiego na placu Tahrir, w tym Złotej Maski Tutanchamona.</li>
+          <li>Rejs po Nilu (dostępny za dodatkową opłatą).</li>
+          <li>Lunch w tradycyjnej restauracji w Gizie.</li>
+          <li>Zwiedzanie płaskowyżu Gizy z piramidami i Sfinksem.</li>
+          <li>Możliwość wejścia do wnętrza piramid (za dodatkową opłatą).</li>
+        </ul>
+      </div>
+  
+      <div class="details">
+        <h2>Plan wycieczki:</h2>
+        <p>
+          Wyjazd klimatyzowanym pojazdem (dokładna godzina odbioru zostanie potwierdzona dzień 
+          przed wyjazdem w zależności od hotelu, w którym się zatrzymujesz). 
+          Około 9:00 przyjedziemy do Kairu.
+        </p>
+        <p>
+          Rozpoczniemy od wizyty w <strong>Muzeum Egipskim</strong>, gdzie można zobaczyć
+          wiele antyków faraonów, w tym Złotą Maskę Tutanchamona. Następnie odbędziemy 
+          <strong>krótki rejs po Nilu</strong> (opcjonalnie) i odwiedzimy instytut papirusu.
+          Lunch odbędzie się w tradycyjnej restauracji w Gizie.
+        </p>
+        <p>
+          Po lunchu udamy się na płaskowyż Gizy, gdzie odwiedzimy
+          <strong>piramidy i Sfinksa</strong>. Będziesz mógł poczuć ducha starożytnego Egiptu
+          stojąc obok tych niesamowitych zabytków.
+        </p>
+      </div>
+  
+      <p class="note">
+        <strong>Uwaga:</strong> Wejście do piramid oraz rejs po Nilu są dostępne za dodatkową opłatą.
+      </p>
+  
+      <div class="cta">
+        <a href="https://wa.me/201010655608?text=" class="btn">Zarezerwuj teraz</a>
+      </div>
+    </div>
+  </section>
+  
+  
+   <!-- accordion trip quations
+   -->
+   <section class="trip-summary">
+    <div class="container">
+      <h1>Wycieczka do Kairu – Piramidy, Sfinks i Muzeum Egipskie</h1>
+      <p class="intro">
+        Dołącz do naszej całodniowej wycieczki do Kairu, podczas której zobaczysz najbardziej kultowe zabytki starożytnego Egiptu, zjesz lunch w tradycyjnej egipskiej restauracji i odwiedzisz słynne bazary. 
+        To idealny dzień pełen historii i przygód!
+      </p>
+  
+      <div class="highlights">
+        <h2>Plan wycieczki:</h2>
+        <ul>
+          <li>Odbiór z hotelu i przejazd do Kairu klimatyzowanym pojazdem.</li>
+          <li>Zwiedzanie płaskowyżu Gizy: Wielkie Piramidy i Wielki Sfinks.</li>
+          <li>Wizyta w Muzeum Egipskim na placu Tahrir.</li>
+          <li>Lunch w tradycyjnej egipskiej restauracji.</li>
+          <li>Odwiedziny na lokalnych bazarach.</li>
+        </ul>
+      </div>
+  
+      <div class="inclusions">
+        <h2>Co jest wliczone:</h2>
+        <ul>
+          <li>✅ Transport klimatyzowanym pojazdem</li>
+          <li>✅ Doświadczony przewodnik</li>
+          <li>✅ Wstępy do wymienionych obiektów</li>
+          <li>✅ Lunch</li>
+          <li>✅ Router Wi-Fi przez cały dzień</li>
+          <li>✅ Woda wewnątrz pojazdu</li>
+        </ul>
+      </div>
+  
+      <div class="exclusions">
+        <h2>Co nie jest wliczone:</h2>
+        <ul>
+          <li>❌ Napiwki</li>
+          <li>❌ Napoje bezalkoholowe do lunchu</li>
+          <li>❌ Wejście do piramid </li>
+          <li>❌ Rejs po Nilu </li>
+        </ul>
+      </div>
+  
+      <p class="note">
+        <strong>Nie zapomnij:</strong> paszportu, aparatu, pieniędzy, wody i pudełka śniadaniowego z hotelu.
+      </p>
+  
+      <div class="cta">
+        <a href="https://wa.me/201010655608?text=" class="btn">Zarezerwuj teraz</a>
+      </div>
+    </div>
+  </section>
+  
+  
+  <!-- Peice -->
+  
+  
+  
+  <div class="accordion faq-section" id="accordionExample">
+    <!-- Accordion Item 1 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button
+          class="accordion-button"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseOne"
+          aria-expanded="true"
+          aria-controls="collapseOne"
+        >
+          Jak zarezerwować wycieczkę do Kairu z Marsa Alam?
+        </button>
+      </h2>
+      <div
+        id="collapseOne"
+        class="accordion-collapse collapse show"
+        aria-labelledby="headingOne"
+        data-bs-parent="#accordionExample"
+      >
+        <div class="accordion-body">
+          Aby zarezerwować wycieczkę do Kairu, prześlij:
+          <ul>
+            <li>Nazwę hotelu</li>
+            <li>Numer pokoju</li>
+            <li>Imiona i nazwiska wszystkich uczestników</li>
+            <li>Daty przylotu i wylotu</li>
+            <li>Nazwę biura podróży</li>
+            <li>Zdjęcia paszportów i wiz</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Accordion Item 2 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseTwo"
+          aria-expanded="false"
+          aria-controls="collapseTwo"
+        >
+          Jaka jest cena wycieczki do Kairu z Marsa Alam dla dzieci?
+        </button>
+      </h2>
+      <div
+        id="collapseTwo"
+        class="accordion-collapse collapse"
+        aria-labelledby="headingTwo"
+        data-bs-parent="#accordionExample"
+      >
+        <div class="accordion-body">
+          <strong>Dzieci do 6 lat:</strong> wycieczka za darmo. <br />
+          <strong>Dzieci od 6 do 12 lat:</strong> płacą połowę ceny 60$.
+        </div>
+      </div>
+    </div>
+  
+    <!-- Accordion Item 3 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseThree"
+          aria-expanded="false"
+          aria-controls="collapseThree"
+        >
+          W jakie dni odbywa się wycieczka?
+        </button>
+      </h2>
+      <div
+        id="collapseThree"
+        class="accordion-collapse collapse"
+        aria-labelledby="headingThree"
+        data-bs-parent="#accordionExample"
+      >
+        <div class="accordion-body">
+          możesz zarezerwować wycieczkę każdego dnia, możesz zarezerwować wycieczkę prywatną. lub z grupą maksymalnie 8 osób. lub dużym autobusem. lub małym samochodem. i jest ona każdego dnia
+        </div>
+      </div>
+    </div>
+  
+    <!-- Accordion Item 4 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFour">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseFour"
+          aria-expanded="false"
+          aria-controls="collapseFour"
+        >
+          Czy podczas wycieczki są ukryte koszty?
+        </button>
+      </h2>
+      <div
+        id="collapseFour"
+        class="accordion-collapse collapse"
+        aria-labelledby="headingFour"
+        data-bs-parent="#accordionExample"
+      >
+        <div class="accordion-body">
+          Poza pozycjami „Dodatkowo płatne” nie ma żadnych ukrytych kosztów. 
+          Skontaktuj się z nami na 
+          <a href="https://shorturl.at/Z8k9r" target="_blank">Facebooku</a> lub 
+          przez WhatsApp pod numerem 
+          <a href="https://wa.me/201010655608?text=">+201010655608</a>.
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Peice -->
+  
+  
+  
+    <!-- end of peice -->
+    <section id="description" class="faq-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 class="faq-title">WYCIECZKA DO KAIRU - NAJCZĘŚCIEJ ZADAWANE PYTANIA:</h2>
+          </div>
+        </div>
+        <div class="row faq-cards">
+          <!-- Column 1 -->
+          <div class="col-lg-6">
+            <div class="faq-card">
+              <h4>Wycieczka do Kairu z Marsa Alam – czy warto?</h4>
+              <p>
+                Wycieczka do Kairu jest szczególnie polecana osobom, które chcą zobaczyć piramidy oraz
+                eksponaty w Muzeum Egipskim. Pomimo długiej jazdy (ok. 8–9 godzin w jedną stronę),
+                wrażenia są tego warte!
+              </p>
+            </div>
+            <div class="faq-card">
+              <h4>Wycieczka do Kairu z Marsa Alam – o czym warto pamiętać?</h4>
+              <p>
+                Wycieczka jest całodniowa z lunchem w cenie. Pamiętaj o zamówieniu śniadania na wynos w
+                recepcji hotelu. Wejście do wnętrza piramidy i Muzeum Łodzi Khufu jest dodatkowo
+                płatne.
+              </p>
+            </div>
+            <div class="faq-card">
+              <h4>Czy wycieczka do Kairu odbywa się w czasach koronawirusa?</h4>
+              <p>
+                W programie wciąż jest stare Muzeum Egipskie z eksponatami, takimi jak Złota Maska
+                Tutenchamona. Nowe muzeum jest jeszcze niedostępne dla grup zorganizowanych.
+              </p>
+            </div>
+            <div class="faq-card">
+              <h4>Jak blisko piramid będziemy?</h4>
+              <p>
+                Piramidy będą na wyciągnięcie ręki. Wejście do ich wnętrza jest dodatkowo płatne.
+              </p>
+            </div>
+          </div>
+          <!-- Column 2 -->
+          <div class="col-lg-6">
+            <div class="faq-card">
+              <h4>Czy wycieczka do Kairu jest bezpieczna?</h4>
+              <p>
+                Wycieczka odbywa się pod nadzorem policji turystycznej. Każda wycieczka posiada
+                odpowiednie zezwolenia zapewniające bezpieczeństwo.
+              </p>
+            </div>
+            <div class="faq-card">
+              <h4>Jak poznam bus/autokar, który po mnie przyjedzie?</h4>
+              <p>
+                Kierowca zna Twój numer pokoju. Jeśli nie rozumiesz numeru, pokaże go na telefonie.
+                Zwiedzanie odbywa się z polskojęzycznym przewodnikiem.
+              </p>
+            </div>
+            <div class="faq-card">
+              <h4>O której jest wyjazd z hotelu/powrót?</h4>
+              <p>
+                Odbiór z hotelu między 22:00 a 23:30. Powrót ok. 22:00–23:00 w nocy. Dokładna godzina
+                zostanie potwierdzona.
+              </p>
+            </div>
+            <div class="faq-card">
+              <h4>Czy za wycieczkę można zapłacić inną walutą/kartą/przelewem?</h4>
+              <p>
+                Akceptujemy USD, EUR, GBP oraz EGP. Nie akceptujemy kart płatniczych. W wyjątkowych
+                sytuacjach akceptujemy przelewy, jednak preferujemy gotówkę.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
