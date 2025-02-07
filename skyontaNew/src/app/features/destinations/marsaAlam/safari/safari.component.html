@@ -1,1 +1,146 @@
-<p>safari works!</p>
+<div class="container">
+    <div class="row">
+      <div  class="col-md-6 col-sm-12 trip-title" style="margin-top: 100px; ">
+        <h1>3-godzinny safari quadami z przejażdżką na wielbłądzie</h1>
+      </div>
+    </div>
+  
+    <!-- start of carasoule -->
+    <div class="carousel">
+      <button class="nav left" (click)="prevSlide()">&#10094;</button>
+      <div class="carousel-track">
+        <div class="carousel-slide" *ngFor="let image of tripImages; let i = index" [class.active]="i === currentSlide">
+          <img [src]="image.src" [alt]="image.alt" />
+        </div>
+      </div>
+      <button class="nav right" (click)="nextSlide()">&#10095;</button>
+    </div>
+  
+    <div class="dots">
+      <span class="dot" *ngFor="let image of tripImages; let i = index" [class.active]="i === currentSlide"
+        (click)="goToSlide(i)"></span>
+    </div>
+
+    <section class="trip-container">
+        <div class="trip-header">
+            <h2>🏜️ Quad Safari - Przygoda na Pustyni</h2>
+            <h5 class="price">💰 Cena: <span>25$</span> / osoba</h5>
+             <strong>Dzieci (5-11 lat):</strong> <span class="price"> 15$</span>
+            <p class="details">📅 <strong>Codziennie</strong> | ⏳ <strong>3 godziny</strong> | 💳 <strong>Zapłata na miejscu</strong></p>
+        </div>
+
+        <div class="trip-content">
+            <p>🌄 Pustynna przygoda zaczyna się o <strong>13:00</strong>, gdy odbierzemy Cię z hotelu legendarnym Toyota Land Cruiserem 4x4! 
+            🚙 <strong>Yallah!</strong> Czeka na Ciebie niezapomniany dzień pełen emocji i lokalnej kultury!</p>
+            <p> <strong>Adrenalina</strong>, niesamowite krajobrazy, piaskowy pył, ekscytująca jazda, a do tego możliwość poznania beduińskiej kultury i stylu życia – to przeżycia jakich nie da się zapomnieć do końca życia! Skorzystaj z naszej wycieczki i przekonaj się na własnej skórze </p>
+
+            <h3>📌 Plan Wycieczki:</h3>
+            <ul class="trip-plan">
+                <li>🚙 Przejazd Jeepem 4x4 przez pustynię (22 km) z przystankiem przy słynnym drzewie Akassia.</li>
+                <li>🏜️ Przyjazd do wioski Beduinów – powitalna herbata i pokaz lokalnych tradycji.</li>
+                <li>🏍️ Przejażdżka quadem po pustynnych dolinach! (Adrenalina gwarantowana!)</li>
+                <li>🐫 Jazda na wielbłądzie – poznaj życie Beduinów!</li>
+                <li>🥖 Wizyta u Beduinki piekącej tradycyjny chleb, apteka, studnia.</li>
+                <li>🌅 Podziwianie zachodu słońca w sercu pustyni – niepowtarzalne widoki!</li>
+                <li>🔥 Kolacja BBQ z otwartym bufetem: grillowany kurczak, kofta, sałatki, owoce, napoje. cena 30$ z kolacją bez 25$</li>
+                <li>💃 Tradycyjna impreza beduińska – muzyka, taniec i niezapomniana atmosfera!</li>
+                <li>✨ Pokaz gwiazd w podniebnym teatrze przed powrotem do hotelu.</li>
+            </ul>
+
+            <h3>💰 Cennik:</h3>
+            <ul class="trip-prices">
+                <li>👤 <strong>Dorosły:</strong> <span>  25$</span></li>
+                <li>👶 <strong>Dzieci (5-11 lat):</strong> <span> 15$</span></li>
+                <li>🍼 <strong>Dzieci (0-5 lat):</strong> <span> Bezpłatnie</span></li>
+            </ul>
+
+            <h3>✅ Wliczone w cenę:</h3>
+            <ul class="included">
+                <li>🚐 Transfer z/do hotelu</li>
+                <li>🥤 Napoje bezalkoholowe</li>
+                <li>🐫 jazda na wielbłądzie</li>
+            </ul>
+
+            <h3>❌ Nie wliczone w cenę:</h3>
+            <ul class="not-included">
+                <li>💰 Wydatki osobiste (napiwki, zdjęcia)</li>
+                <li>🧕 Arafatki – można kupić na miejscu</li>
+            </ul>
+        </div>
+
+    </section>
+    
+    <section class="faq-container">
+        <h2><i class="fas fa-question-circle"></i>
+            Quad Safari w Marsa Alam - Najczęściej Zadawane Pytania</h2>
+
+        <div class="faq-item">
+            <input type="checkbox" id="faq1">
+            <label for="faq1" class="faq-title">
+                <i class="fa-solid fa-tshirt"></i> W co się ubrać na quad safari?
+            </label>
+            <div class="faq-content">
+                <p>Na quad safari warto wziąć sportowy, wygodny strój oraz sportowe buty. Pamiętajcie, że z wycieczki wrócicie mocno „zakurzeni”.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <input type="checkbox" id="faq2">
+            <label for="faq2" class="faq-title">
+                <i class="fa-solid fa-bus"></i> Jak poznam bus/autokar, który po mnie przyjedzie?
+            </label>
+            <div class="faq-content">
+                <p>Osoba, która po Was przyjeżdża, ma Wasz numer pokoju i powinna go podać. Jeśli będzie problem ze zrozumieniem, pokaże numer w telefonie.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <input type="checkbox" id="faq3">
+            <label for="faq3" class="faq-title">
+                <i class="fa-solid fa-clock"></i> O której jest wyjazd z hotelu / powrót?
+            </label>
+            <div class="faq-content">
+                <p>Hotele w rejonie Marsa Alam są bardzo porozrzucane, dlatego godziny wyjazdu/powrotu są różne. Poranne quady odbywają się w godz. <strong>8:00 - 12:00</strong>, a popołudniowe <strong>14:00 - 19:00</strong>.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <input type="checkbox" id="faq4">
+            <label for="faq4" class="faq-title">
+                <i class="fa-solid fa-money-bill"></i> Kiedy i komu mamy zapłacić za wycieczkę?
+            </label>
+            <div class="faq-content">
+                <p>Płatność jest podczas wycieczki pierwszej osobie, która zna Wasz numer pokoju oraz kwotę do zapłaty. Zwykle płatność odbywa się dopiero na pustyni.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <input type="checkbox" id="faq5">
+            <label for="faq5" class="faq-title">
+                <i class="fa-solid fa-credit-card"></i> Czy można zapłacić inną walutą / kartą / przelewem?
+            </label>
+            <div class="faq-content">
+                <p>Akceptujemy płatności w <strong>dolarach, euro, funtach brytyjskich i egipskich</strong>. Nie akceptujemy płatności kartą. Możliwa jest płatność przelewem w wyjątkowych sytuacjach.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <input type="checkbox" id="faq6">
+            <label for="faq6" class="faq-title">
+                <i class="fa-solid fa-exclamation-circle"></i> Czy podczas wycieczki są ukryte koszty?
+            </label>
+            <div class="faq-content">
+                <p>Nie ma żadnych dodatkowych kosztów poza tymi, które znajdują się na liście <strong>„Dodatkowo płatne”</strong>.</p>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <p>📞 Masz pytania? Skontaktuj się z nami:</p>
+            <a href="https://wa.me/201010655608?text=Chciałbym+zarezerwować+Quad+Safari!" class="btn-reservation"> Rezerwuj teraz
+            </a>
+            <a href="mailto:info@skyontatours.pl" class="btn-contact">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+        </div>
+
+    </section>

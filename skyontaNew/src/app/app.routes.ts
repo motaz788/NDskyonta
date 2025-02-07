@@ -7,6 +7,7 @@ import { PortoComponent } from './features/destinations/marsaAlam/porto/porto.co
 import { SupersafariComponent } from './features/destinations/marsaAlam/supersafari/supersafari.component';
 import { TaxiComponent } from './features/taxi/taxi.component';
 import { ContactComponent } from './features/contact/contact.component';
+import { SafariComponent } from './features/destinations/marsaAlam/safari/safari.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -17,6 +18,7 @@ export const routes: Routes = [
     { path: 'porto', component: PortoComponent },
     { path: 'taxi', component: TaxiComponent },
     { path: 'aboutus', component: ContactComponent },
+    { path: 'safari3hours', component: SafariComponent },
 
     { path: 'safari', component: SupersafariComponent },
     { path: 'qusier', component: QusierComponent },

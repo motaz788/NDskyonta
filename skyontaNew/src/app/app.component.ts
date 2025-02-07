@@ -14,5 +14,5 @@ import { HomeComponent } from "./features/home/home.component";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'skyontaNew';
+  title = 'SkyOnta Tours';
 }
